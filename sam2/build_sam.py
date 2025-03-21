@@ -17,7 +17,7 @@ def build_sam2(
     ckpt_path=None,
     device="cuda",
     mode="eval",
-):
+):  
     model = instantiate(model_cfg, _recursive_=True)
     _load_checkpoint(model, ckpt_path)
     model = model.to(device)
